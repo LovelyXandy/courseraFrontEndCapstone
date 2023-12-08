@@ -1,31 +1,293 @@
+* {
+  font-family: "Markazi Text", "Karla", serif;
+}
+
+:root {
+  --lemongreen: #495E57;
+  --lemonyellow: #F4CE14;
+  --secondone: #EE9972;
+  --secondtwo: #FBDABB;
+  --highlightlight: #EDEFEE;
+  --highlightdark: #333333;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: "Markazi Text";
+}
+
+p {
+  font-family: "Markazi Text";
+}
+
+.specials-container,
+.customers-container {
+  padding-block: 2em;
+  background-color: var(--lemongreen);
+}
+
+.scrolling-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2em;
+	align-items: stretch;
+	justify-content: center;
+  background-color: var(--lemongreen);
+}
+
+.specials-title,
+.customers-title {
+	font-family: 'Markazi Text', serif;
+	font-size: 48px;
+	font-weight: 300;
+	line-height: 50px;
+	letter-spacing: 0em;
+	text-align: left;
+	color: var(--lemonyellow);
+	margin: 0;
+}
+
+.scrolling-item {
+	width: 250px;
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	padding-bottom: 1em;
+  background-color: var(--highlightlight);
+	border-radius: 16px;
+	position: relative;
+}
+
+.specials-img {
+	width: 100%;
+  border-radius: 16px;
+}
+
+.name-price {
+	display: flex;
+	justify-content: space-between;
+  padding: 0.5em;
+}
+
+.item-name {
+	font-family: 'Markazi', sans-serif;
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 26px;
+	letter-spacing: 0em;
+	text-align: left;
+}
+
+.item-price{
+	font-family: 'Karla', sans-serif;
+  font-size: 18px;
+	font-weight: 500;
+	line-height: 20px;
+	letter-spacing: 0em;
+	text-align: left;
+	color: var(--secondone);
+}
+
+.item-desc {
+	font-family: 'Karla', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 20px;
+	letter-spacing: 0em;
+	text-align: left;
+	color: var(--highlightdark);
+  padding: 1em;
+  padding-bottom: 3em;
+}
+
+.delivery {
+	font-family: 'Karla', sans-serif;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 19px;
+	letter-spacing: 0em;
+	text-align: left;
+	position: absolute;
+	bottom: 0.3em;
+  padding: 1em;
+}
+
+.hero-container,
+.desc-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 2em;
+  background-color: var(--lemongreen);
+}
+
+.hero-title,
+.desc-title {
+	font-family: 'Markazi Text', serif;
+	font-size: 64px;
+	font-weight: 500;
+	line-height: 72px;
+	letter-spacing: 0em;
+	text-align: left;
+	color: var(--lemonyellow);
+	margin: 0;
+}
+
+.hero-subtitle,
+.desc-subtitle {
+	font-family: 'Markazi Text', serif;
+	font-size: 48px;
+	font-weight: 400;
+	line-height: 50px;
+	letter-spacing: 0em;
+	text-align: left;
+	color: var(--highlightlight);
+	margin: 0;
+}
+
+.hero-desc,
+.desc-text {
+	color: var(--highlightlight);
+	font-family: 'Karla', sans-serif;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 21px;
+	letter-spacing: 0em;
+	text-align: left;
+}
+
+.image-wrapper {
+	right: 2em;
+	max-width: 250px;
+	max-height: 275px;
+	align-self: flex-end;
+	margin-bottom: -1em;
+	flex-basis: 1;
+}
+
+.hero-img,
+.desc-img {
+	width: 100%;
+  border-radius: 16px;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.flex {
+  display: flex;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  background: var(--lemongreen);
+  height: 100%;
+  width: 100%;
+}
+
+.footer-area {
+  display: grid;
+  padding: 2rem 0;
+  margin: 0 auto;
+  grid-template-columns: 0.25fr repeat(3, 1fr);
+  height: 100%;
+  width: 100%;
+  grid-template-areas: "logo nav contact social";
+  grid-column-gap: 1.5rem;
+}
+
+.footer-logo {
+  height: 50px;
+  grid-area: logo;
+  object-fit: contain;
+  align-content: center;
+  align-items: center;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.footer-nav-title,
+.footer-contact-title,
+.footer-social-title {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  margin: 0 0 1rem 0;
+}
+.footer-nav {
+  grid-area: nav;
+  align-self: start;
+}
+
+.footer-contact {
+  grid-area: contact;
+}
+
+.footer-social {
+  grid-area: social;
+}
+
+.footer-nav-item,
+.footer-contact-item,
+.footer-social-item {
+  margin: 0.5rem 0;
+  text-decoration: none;
+  color: white;
+  display: flex;
+}
+
+.navbar {
+  display: grid;
+  grid-template-columns: 0.5fr repeat(6, 1fr);
+  background: var(--lemongreen);
+  height: 100%;
+  width: 100%;
+  color: white;
+  flex-direction: row;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+.navbar > li,
+.navbar > a,
+.navbar > Link {
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.hover-effect:hover {
+  background-color: var(--lemonyellow);
+  transition: 0.25s;
+}
+
+.nav-logo {
+  height: 50px;
+  object-fit: contain;
+  align-content: center;
+  align-items: center;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +297,29 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.btn,
+.submit {
+	background-color: var(--lemonyellow);
+	border: none;
+	outline: none;
+	border-radius: 16px;
+	font-family: "Karla", sans-serif;
+	color: var(--highlightdark);
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 20px;
+	letter-spacing: 0em;
+	text-align: center;
+	padding: -.5em;
+	cursor: pointer;
+}
+
+.reserve-btn {
+	margin-top: 1em;
+}
+
+.btn {
+	padding: 1em;
 }
